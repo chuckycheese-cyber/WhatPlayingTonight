@@ -1,4 +1,4 @@
-// Nightly scraper: reads Columbia's Bedework JSON feeds, keeps free performances, writes events.json
+// Nightly scraper: reads Columbia's Bedework JSON feeds, keeps upcoming performances with their prices, writes events.json
 import { writeFile } from 'node:fs/promises';
 
 // Each source is an Export URL from events.columbia.edu (Export Options -> Event feed -> JSON).
@@ -22,12 +22,12 @@ const DAYS_AHEAD = 60;
 const nyToday = () => new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 const plusDays = (n) => new Date(Date.now() + n * 864e5).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 
-// Keep if the listing says free, or gives no price. Drop if it shows a price.
-function isFree(cost) {
+// 'free' if the listing says so, 'paid' if it shows a price, 'unknown' if the cost is blank.
+function priceKind(cost) {
   const c = String(cost || '').trim();
-  if (!c) return true;
-  if (/free|no cost|no charge|open to all|\$\s*0(\.00)?\b/i.test(c) && !/\$\s*[1-9]/.test(c)) return true;
-  return false;
+  if (!c) return 'unknown';
+  if (/free|no cost|no charge|open to all|\$\s*0(\.00)?\b/i.test(c) && !/\$\s*[1-9]/.test(c)) return 'free';
+  return 'paid';
 }
 
 // Bedework gives datetime like 20261118T190000; turn it into 2026-11-18T19:00:00
@@ -75,7 +75,6 @@ async function fetchSource({ type, url }) {
   const lo = nyToday(), hi = plusDays(DAYS_AHEAD);
   const out = [];
   for (const e of list) {
-    if (!isFree(e.cost)) continue;
     const start = toIso(e.start);
     if (!start) continue;
     const day = start.slice(0, 10);
@@ -87,6 +86,8 @@ async function fetchSource({ type, url }) {
       start,
       venue: clean(e.location?.address || '').replace(/,?\s*New York,\s*NY\s*\d{5}/i, ''),
       type: typeOf(e, type),
+      price: priceKind(clean(e.cost)),
+      cost: clean(e.cost).slice(0, 80),
       desc: shorten(clean(e.description)),
       url: e.eventlink || e.link || '',
     });
