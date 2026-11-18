@@ -1,54 +1,68 @@
-// Nightly scraper: pulls Localist calendars, keeps free performances, writes events.json
+// Nightly scraper: reads Columbia's Bedework JSON feeds, keeps free performances, writes events.json
 import { writeFile } from 'node:fs/promises';
 
-// Add more Localist-powered calendars here (same API shape).
+// Each source is an Export URL from events.columbia.edu (Export Options -> Event feed -> JSON).
+// To add more categories (theater, dance, etc.), export another feed and add a line here.
 const SOURCES = [
-  { name: 'Columbia University Events Calendar', base: 'https://events.columbia.edu' },
+  {
+    type: 'Concert',
+    url: 'https://events.columbia.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=(((vpath=%22/public/aliases/Type/Concert%22)))%20and%20(categories.href=%22/public/.bedework/categories/org/UniversityEvents%22)%20and%20(entity_type=%22event%22%7Centity_type=%22todo%22)&skinName=list-json&count=100',
+  },
 ];
 const DAYS_AHEAD = 60;
-const PERFORMANCE = /concert|music|jazz|recital|orchestra|choir|chorus|a cappella|theat|play\b|musical|comedy|improv|open mic|dance|performance|showcase|poetry|spoken word|band\b/i;
 
-const isFree = (e) =>
-  e.free === true || /^\s*(free|no cost|no charge|\$?0(\.00)?)\b/i.test(e.ticket_cost || '');
+const nyToday = () => new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
+const plusDays = (n) => new Date(Date.now() + n * 864e5).toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
 
-function guessType(text) {
-  if (/comedy|improv|sketch|stand-?up/i.test(text)) return 'Comedy';
-  if (/open mic|poetry|spoken word/i.test(text)) return 'Open mic';
-  if (/dance/i.test(text)) return 'Dance';
-  if (/theat|play\b|musical/i.test(text)) return 'Theater';
-  return 'Concert';
+// Keep if the listing says free, or gives no price. Drop if it shows a price.
+function isFree(cost) {
+  const c = String(cost || '').trim();
+  if (!c) return true;
+  if (/free|no cost|no charge|open to all|\$\s*0(\.00)?\b/i.test(c) && !/\$\s*[1-9]/.test(c)) return true;
+  return false;
 }
 
-async function fetchSource({ name, base }) {
+// Bedework gives datetime like 20261118T190000; turn it into 2026-11-18T19:00:00
+function toIso(start) {
+  const dt = start?.datetime;
+  if (dt && /^\d{8}T\d{6}$/.test(dt)) {
+    return `${dt.slice(0, 4)}-${dt.slice(4, 6)}-${dt.slice(6, 8)}T${dt.slice(9, 11)}:${dt.slice(11, 13)}:00`;
+  }
+  if (dt && /^\d{8}$/.test(dt)) return `${dt.slice(0, 4)}-${dt.slice(4, 6)}-${dt.slice(6, 8)}T00:00:00`;
+  if (start?.longdate) return `${start.longdate}T00:00:00`;
+  return null;
+}
+
+const clean = (s) => String(s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+
+async function fetchSource({ type, url }) {
+  const res = await fetch(url, {
+    headers: {
+      'User-Agent': 'Mozilla/5.0 (compatible; whatsplayingtonight.com)',
+      Accept: 'application/json,text/plain,*/*',
+    },
+  });
+  if (!res.ok) throw new Error(`${type}: HTTP ${res.status}`);
+  const json = JSON.parse(await res.text());
+  const list = json?.bwEventList?.events ?? [];
+  const lo = nyToday(), hi = plusDays(DAYS_AHEAD);
   const out = [];
-  let page = 1, total = 1;
-  while (page <= total && page <= 20) {
-    const url = `${base}/api/2/events?days=${DAYS_AHEAD}&pp=100&page=${page}`;
-    const res = await fetch(url, { headers: { 'User-Agent': 'whatsplayingtonight.com' } });
-    if (!res.ok) throw new Error(`${name}: HTTP ${res.status} for ${url}`);
-    const json = await res.json();
-    total = json.page?.total ?? 1;
-    for (const wrap of json.events ?? []) {
-      const e = wrap.event;
-      if (!isFree(e)) continue;
-      const tags = Object.values(e.filters ?? {}).flat().map((f) => f.name).join(' ');
-      const hay = `${e.title} ${tags} ${e.description_text ?? ''}`;
-      if (!PERFORMANCE.test(`${e.title} ${tags}`)) continue;
-      for (const inst of e.event_instances ?? []) {
-        const i = inst.event_instance;
-        out.push({
-          id: `${e.id}-${i.start}`,
-          title: e.title,
-          start: i.start,               // ISO string, already in campus local time
-          venue: e.location_name || '',
-          type: guessType(hay),
-          desc: (e.description_text || '').slice(0, 200).trim(),
-          url: e.localist_url || e.url || '',
-          source: name,
-        });
-      }
-    }
-    page++;
+  for (const e of list) {
+    if (!isFree(e.cost)) continue;
+    const start = toIso(e.start);
+    if (!start) continue;
+    const day = start.slice(0, 10);
+    if (day < lo || day > hi) continue;
+    if (String(e.status || '').toUpperCase() === 'CANCELLED') continue;
+    out.push({
+      id: `${e.guid || e.eventlink || e.summary}-${start}`,
+      title: clean(e.summary),
+      start,
+      venue: clean(e.location?.address || ''),
+      type,
+      desc: clean(e.description).slice(0, 200),
+      url: e.eventlink || e.link || '',
+    });
   }
   return out;
 }
@@ -56,12 +70,10 @@ async function fetchSource({ name, base }) {
 const all = [];
 for (const s of SOURCES) {
   try { all.push(...(await fetchSource(s))); }
-  catch (err) { console.error(String(err)); }   // one bad source shouldn't kill the run
+  catch (err) { console.error(String(err)); }
 }
 const seen = new Set();
-const events = all
-  .filter((e) => !seen.has(e.id) && seen.add(e.id))
-  .sort((a, b) => a.start.localeCompare(b.start));
+const events = all.filter((e) => !seen.has(e.id) && seen.add(e.id)).sort((a, b) => a.start.localeCompare(b.start));
 
 if (!events.length && process.env.CI) {
   console.error('No events found; keeping previous events.json');
