@@ -5,10 +5,18 @@ import { writeFile } from 'node:fs/promises';
 // To add more categories (theater, dance, etc.), export another feed and add a line here.
 const SOURCES = [
   {
-    type: 'Concert',
-    url: 'https://events.columbia.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=(((vpath=%22/public/aliases/Type/Concert%22)))%20and%20(categories.href=%22/public/.bedework/categories/org/UniversityEvents%22)%20and%20(entity_type=%22event%22%7Centity_type=%22todo%22)&skinName=list-json&count=100',
+    type: 'Performance', // fallback label if an event has no recognizable category
+    url: 'https://events.columbia.edu/feeder/main/eventsFeed.do?f=y&sort=dtstart.utc:asc&fexpr=(((vpath=%22/public/aliases/Type/Concert%22)%20or%20(vpath=%22/public/aliases/Type/Exhibition%22)%20or%20(vpath=%22/public/aliases/Type/Film%22)%20or%20(vpath=%22/public/aliases/Type/Performance%22)%20or%20(vpath=%22/public/aliases/Type/Theater%22)))%20and%20(categories.href=%22/public/.bedework/categories/org/UniversityEvents%22)%20and%20(entity_type=%22event%22%7Centity_type=%22todo%22)&skinName=list-json&count=200',
   },
 ];
+// Label each event by its Columbia category (first match wins).
+function typeOf(e, fallback) {
+  const cats = JSON.stringify(e.categories || []);
+  for (const [re, label] of [[/concert/i, 'Concert'], [/theat/i, 'Theater'], [/film/i, 'Film'], [/exhibit/i, 'Exhibition'], [/performance/i, 'Performance']]) {
+    if (re.test(cats)) return label;
+  }
+  return fallback;
+}
 const DAYS_AHEAD = 60;
 
 const nyToday = () => new Date().toLocaleDateString('en-CA', { timeZone: 'America/New_York' });
@@ -59,7 +67,7 @@ async function fetchSource({ type, url }) {
       title: clean(e.summary),
       start,
       venue: clean(e.location?.address || ''),
-      type,
+      type: typeOf(e, type),
       desc: clean(e.description).slice(0, 200),
       url: e.eventlink || e.link || '',
     });
