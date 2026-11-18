@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-18T15:46:47.495Z",
+ "generatedAt": "2026-11-18T17:30:26.208Z",
  "events": [
   {
    "id": "CAL-00bbdb71-a11a8f2f-01a1-1c71a71e-00006e46events%40columbia.edu-2026-11-18T18:00:00",
@@ -11,6 +11,15 @@
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a11a8f2f-01a1-1c71a71e-00006e46events%40columbia.edu&recurrenceId="
   },
   {
+   "id": "CAL-00bbdb7c-a0c82d20-01a0-cb50f2fc-00000caeevents%40columbia.edu-2026-11-18T19:10:00",
+   "title": "ISHR Fall Film Series",
+   "start": "2026-11-18T19:10:00",
+   "venue": "Schermerhorn Hall, 1198 Amsterdam Ave., New York, NY 10027 501",
+   "type": "Film",
+   "desc": "&lt;p&gt;Join us for ISHR&amp;#39;s human rights film series featuring thought-provoking films and documentaries. Open to all Columbia affiliates.&amp;nbsp;&lt;/p&gt; &lt;p&gt;Film line up:&lt;/p&gt; ",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a0c82d20-01a0-cb50f2fc-00000caeevents%40columbia.edu&recurrenceId=20261119T001000Z"
+  },
+  {
    "id": "CAL-00bbdb70-a162a385-01a1-64ddbc41-000062ecevents%40columbia.edu-2026-11-19T16:00:00",
    "title": "An Afternoon with Emmet Cohen: Live Jazz Performance &amp; Discussion",
    "start": "2026-11-19T16:00:00",
@@ -18,6 +27,33 @@
    "type": "Concert",
    "desc": "&lt;p&gt;The Zuckerman Institute is thrilled to welcome celebrated jazz pianist &lt;strong&gt;Emmet Cohen&lt;/strong&gt; as our new Jazz Artist-in-Residence. Join us for a performance with Emmet, mode",
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb70-a162a385-01a1-64ddbc41-000062ecevents%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb7c-a0c82d20-01a0-ca77948b-00005e74events%40columbia.edu-2026-11-19T18:30:00",
+   "title": "Lenfest Film: Andy Bienen Presents 'The Best Years of Our Lives'",
+   "start": "2026-11-19T18:30:00",
+   "venue": "Lenfest Center for the Arts, 615 W. 129 St., New York, NY 10027 Katharina Otto-Bernstein Screening Room (Second Floor)",
+   "type": "Film",
+   "desc": "&lt;p&gt;Lenfest Film Faculty Spotlight: Andy Bienen Presents &lt;em&gt;The Best Years of Our Lives&lt;/em&gt;&lt;/p&gt; &lt;p&gt;&lt;em&gt;The Best Years of Our Lives&lt;/em&gt; follows three World W",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a0c82d20-01a0-ca77948b-00005e74events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb70-a1b019f4-01a1-b1e18d6e-000052a2events%40columbia.edu-2026-11-20T18:00:00",
+   "title": "Plus 86 Fall Showcase 2026",
+   "start": "2026-11-20T18:00:00",
+   "venue": "Lerner Hall, 2920 Broadway, New York, NY 10027 Roone Arledge Auditorium",
+   "type": "Performance",
+   "desc": "&lt;p&gt;&lt;strong&gt;Plus86 Dance Crew | Columbia University&lt;/strong&gt;&lt;br /&gt; As the only Chinese street dance crew at Columbia University, Plus86 actively participates in a wide range of ",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb70-a1b019f4-01a1-b1e18d6e-000052a2events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb7c-a0c82d20-01a0-cb2d6b5c-000005f1events%40columbia.edu-2026-11-21T12:00:00",
+   "title": "Lenfest Kids: 'Meet the Robinsons'",
+   "start": "2026-11-21T12:00:00",
+   "venue": "Lenfest Center for the Arts, 615 W. 129 St., New York, NY 10027 Katharina Otto-Bernstein Screening Room (Second Floor)",
+   "type": "Film",
+   "desc": "&lt;p&gt;Lewis is a young orphan inventor determined to find the mother he never knew. When a mysterious boy named Wilbur whisks him away to the year 2037, Lewis is welcomed into the wonderfully wacky",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a0c82d20-01a0-cb2d6b5c-000005f1events%40columbia.edu&recurrenceId="
   },
   {
    "id": "CAL-00bbdb7c-a18192d4-01a1-835cb728-00004f01events%40columbia.edu-2026-11-22T18:00:00",
@@ -29,6 +65,24 @@
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a18192d4-01a1-835cb728-00004f01events%40columbia.edu&recurrenceId="
   },
   {
+   "id": "CAL-00bbdb7c-a0c82d20-01a0-cb50f2fc-00000caeevents%40columbia.edu-2026-11-25T19:10:00",
+   "title": "ISHR Fall Film Series",
+   "start": "2026-11-25T19:10:00",
+   "venue": "Schermerhorn Hall, 1198 Amsterdam Ave., New York, NY 10027 501",
+   "type": "Film",
+   "desc": "&lt;p&gt;Join us for ISHR&amp;#39;s human rights film series featuring thought-provoking films and documentaries. Open to all Columbia affiliates.&amp;nbsp;&lt;/p&gt; &lt;p&gt;Film line up:&lt;/p&gt; ",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a0c82d20-01a0-cb50f2fc-00000caeevents%40columbia.edu&recurrenceId=20261126T001000Z"
+  },
+  {
+   "id": "CAL-00bbdb70-a056d8de-01a0-59a46bf8-000066a5events%40columbia.edu-2026-12-01T18:00:00",
+   "title": "IIJS Film Series: \"The Floaters\"",
+   "start": "2026-12-01T18:00:00",
+   "venue": "Kent Hall, 1140 Amsterdam Ave., New York, NY 10027 617",
+   "type": "Film",
+   "desc": "&lt;h2&gt;Join us for an in-person film screening of &lt;em&gt;The Floaters, &lt;/em&gt;followed by Q&amp;amp;A with director, Rachel Israel.&lt;/h2&gt; &lt;h2&gt;&lt;strong&gt;Tuesday, December 1, at",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb70-a056d8de-01a0-59a46bf8-000066a5events%40columbia.edu&recurrenceId="
+  },
+  {
    "id": "CAL-00bbdb71-a037f77c-01a0-3adff704-00006456events%40columbia.edu-2026-12-01T18:00:00",
    "title": "Pop-Up Concerts: Steven Beck, piano",
    "start": "2026-12-01T18:00:00",
@@ -36,6 +90,24 @@
    "type": "Concert",
    "desc": "&lt;p&gt;Pianist Steven Beck returns with a program that reflects his longstanding collaborations with some of today&amp;rsquo;s leading composers. Featuring works by Juri Seo, Charles Wuorinen, and J",
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a037f77c-01a0-3adff704-00006456events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb70-a06125bd-01a0-62b4bace-000031bcevents%40columbia.edu-2026-12-02T12:00:00",
+   "title": "Eastern European Chamber Music",
+   "start": "2026-12-02T12:00:00",
+   "venue": "International Affairs Building, 420 W. 118 St., New York, NY 10027 Publique, 6th floor",
+   "type": "Performance",
+   "desc": "&lt;p&gt;Please join the East Central European Center, the Barnard Music Program, and the Columbia Music Department for a lunchtime performance of Eastern European chamber music. Organized by &lt;a hr",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb70-a06125bd-01a0-62b4bace-000031bcevents%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb70-a0664bf3-01a0-6881e669-0000531devents%40columbia.edu-2026-12-03T18:30:00",
+   "title": "Screening of Saint Omer-History on Trial Film Series",
+   "start": "2026-12-03T18:30:00",
+   "venue": "Buell Hall, 515 W. 116 St., New York, NY 10027 East Gallery",
+   "type": "Film",
+   "desc": "&lt;p&gt;&lt;strong&gt;&lt;em&gt;Saint Omer&lt;/em&gt;&lt;/strong&gt;&lt;br /&gt; Alice Diop, 2022, 122 min.&lt;br /&gt; Screening followed by a discussion with Aubrey Gabel and Zo&amp;euml; L. Henry&",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb70-a0664bf3-01a0-6881e669-0000531devents%40columbia.edu&recurrenceId="
   },
   {
    "id": "CAL-00bbdb71-9eab6da0-019e-ad74d549-000042d1events%40columbia.edu-2026-12-03T19:30:00",
@@ -47,6 +119,15 @@
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-9eab6da0-019e-ad74d549-000042d1events%40columbia.edu&recurrenceId="
   },
   {
+   "id": "CAL-00bbdb7c-a099d4ae-01a0-9dcae900-00000096events%40columbia.edu-2026-12-05T19:00:00",
+   "title": "Columbia Ballet Collaborative's 20th Anniversary Gala",
+   "start": "2026-12-05T19:00:00",
+   "venue": "The Ailey Citigroup Theater, 405 West 55th Street, New York, NY 10019",
+   "type": "Performance",
+   "desc": "&lt;p&gt;Columbia/Barnard Students: $15 (use discount code STUDENT)&lt;/p&gt; &lt;p&gt;General Admission: $33&lt;/p&gt; &lt;p&gt;Livestream tickets are available at this link:&amp;nbsp;&lt;a href=\"htt",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a099d4ae-01a0-9dcae900-00000096events%40columbia.edu&recurrenceId="
+  },
+  {
    "id": "CAL-00bbdb71-9eab6da0-019e-ad5e2bc2-00003fd5events%40columbia.edu-2026-12-05T19:30:00",
    "title": "Anthony Hervey Septet",
    "start": "2026-12-05T19:30:00",
@@ -54,6 +135,42 @@
    "type": "Concert",
    "desc": "&lt;p&gt;Trumpeter and composer Anthony Hervey, a leading voice in jazz and prot&amp;eacute;g&amp;eacute; of Wynton Marsalis, returns to the Miller stage with his Septet. Blending the complexities of ",
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-9eab6da0-019e-ad5e2bc2-00003fd5events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb71-a18bdb36-01a1-905f81ed-00004d8cevents%40columbia.edu-2026-12-08T15:00:00",
+   "title": "Low Lounge: Snowplace Like Low",
+   "start": "2026-12-08T15:00:00",
+   "venue": "Low Library, 535 W. 116 St., New York, NY 10027",
+   "type": "Performance",
+   "desc": "&lt;p&gt;️Get ready to step into a winter wonderland at the &lt;strong&gt;9th Annual Low Lounge: Snow Place Like Low&lt;/strong&gt;! ️&lt;/p&gt; &lt;p&gt;Join University Life at the &lt;a href=\"https:",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a18bdb36-01a1-905f81ed-00004d8cevents%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb7c-a19b89c9-01a1-9d48fb7f-0000441eevents%40columbia.edu-2026-12-10T14:00:00",
+   "title": "Acting Thesis: 'John Proctor is the Villain'",
+   "start": "2026-12-10T14:00:00",
+   "venue": "Lenfest Center for the Arts, 615 W. 129 St., New York, NY 10027 Flexible Performance Space (Fourth Floor)",
+   "type": "Performance",
+   "desc": "&lt;p&gt;Columbia University School of Arts MFA Acting Cohort of 2027 presents &lt;em&gt;John Proctor is the Villain&lt;/em&gt;, written by Kimberly Belflower and directed by Alice Reagan.&lt;/p&gt; &",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a19b89c9-01a1-9d48fb7f-0000441eevents%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb71-a11a8f2f-01a1-1c826c02-00007176events%40columbia.edu-2026-12-10T18:30:00",
+   "title": "Screening of Dilili in Paris (Dilili &agrave; Paris)",
+   "start": "2026-12-10T18:30:00",
+   "venue": "Buell Hall, 515 W. 116 St., New York, NY 10027 East Gallery",
+   "type": "Film",
+   "desc": "&lt;p&gt;&lt;strong&gt;Directed by Michel Ocelot, 2018, 94 min.&lt;/strong&gt;&lt;/p&gt; &lt;p&gt;With the help of her delivery-boy friend, Dilili, a young Kanak, investigates a spate of mysterious ki",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a11a8f2f-01a1-1c826c02-00007176events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb7c-a0c82d20-01a0-cb2ec2c8-0000061devents%40columbia.edu-2026-12-12T12:00:00",
+   "title": "Lenfest Kids: 'Three Ages'",
+   "start": "2026-12-12T12:00:00",
+   "venue": "Lenfest Center for the Arts, 615 W. 129 St., New York, NY 10027 Katharina Otto-Bernstein Screening Room (Second Floor)",
+   "type": "Film",
+   "desc": "&lt;p&gt;Comedian Buster Keaton stars in his own directorial debut as a determined suitor pursuing the love of his life across three different eras: the Stone Age, Ancient Rome, and the Roaring Twenti",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a0c82d20-01a0-cb2ec2c8-0000061devents%40columbia.edu&recurrenceId="
   }
  ]
 }
