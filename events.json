@@ -1,1 +1,59 @@
-{"generatedAt":null,"events":[]}
+{
+ "generatedAt": "2026-11-18T15:46:47.495Z",
+ "events": [
+  {
+   "id": "CAL-00bbdb71-a11a8f2f-01a1-1c71a71e-00006e46events%40columbia.edu-2026-11-18T18:00:00",
+   "title": "Elisabeth Jacquet de la Guerre: Works Lost and Found",
+   "start": "2026-11-18T18:00:00",
+   "venue": "Buell Hall, 515 W. 116 St., New York, NY 10027 East Gallery",
+   "type": "Concert",
+   "desc": "&lt;p&gt;Panel discussion with Elizabeth Weinfield, Robinson McClellan, Susan Boynton, Anne Higonnet, and Rebecca Cypess&lt;/p&gt; &lt;p&gt;Sonnambula opens their 2026&amp;ndash;2027 season with the p",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a11a8f2f-01a1-1c71a71e-00006e46events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb70-a162a385-01a1-64ddbc41-000062ecevents%40columbia.edu-2026-11-19T16:00:00",
+   "title": "An Afternoon with Emmet Cohen: Live Jazz Performance &amp; Discussion",
+   "start": "2026-11-19T16:00:00",
+   "venue": "Jerome L. Greene Science Center, 3227 Broadway, New York, NY 10027 9th Floor, Kavli Auditorium",
+   "type": "Concert",
+   "desc": "&lt;p&gt;The Zuckerman Institute is thrilled to welcome celebrated jazz pianist &lt;strong&gt;Emmet Cohen&lt;/strong&gt; as our new Jazz Artist-in-Residence. Join us for a performance with Emmet, mode",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb70-a162a385-01a1-64ddbc41-000062ecevents%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb7c-a18192d4-01a1-835cb728-00004f01events%40columbia.edu-2026-11-22T18:00:00",
+   "title": "Columbia UnTapped: Jammin' (Show #2 - 11/22 - 6PM)",
+   "start": "2026-11-22T18:00:00",
+   "venue": "Lerner Hall, 2920 Broadway, New York, NY 10027 Blackbox Theater",
+   "type": "Concert",
+   "desc": "&lt;p&gt;Columbia UnTapped&amp;rsquo;s annual tap showcase,&amp;nbsp;&lt;em&gt;Jammin&amp;rsquo;,&amp;nbsp;&lt;/em&gt;&amp;nbsp;spotlights incredible talent from across Columbia and Barnard&amp;rsquo;",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a18192d4-01a1-835cb728-00004f01events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb71-a037f77c-01a0-3adff704-00006456events%40columbia.edu-2026-12-01T18:00:00",
+   "title": "Pop-Up Concerts: Steven Beck, piano",
+   "start": "2026-12-01T18:00:00",
+   "venue": "Miller Theatre, 2960 Broadway, New York, NY 10027",
+   "type": "Concert",
+   "desc": "&lt;p&gt;Pianist Steven Beck returns with a program that reflects his longstanding collaborations with some of today&amp;rsquo;s leading composers. Featuring works by Juri Seo, Charles Wuorinen, and J",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a037f77c-01a0-3adff704-00006456events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb71-9eab6da0-019e-ad74d549-000042d1events%40columbia.edu-2026-12-03T19:30:00",
+   "title": "The Tallis Scholars: Hail Mary",
+   "start": "2026-12-03T19:30:00",
+   "venue": "Church of St. Mary the Virgin, 145 W. 46 St., New York, NY 10036",
+   "type": "Concert",
+   "desc": "&lt;p&gt;The esteemed Tallis Scholars return for their annual holiday appearance with a concert celebrating music in praise of the Virgin Mary. From beloved settings of&amp;nbsp;&lt;em&gt;Ave Maria&lt",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-9eab6da0-019e-ad74d549-000042d1events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb71-9eab6da0-019e-ad5e2bc2-00003fd5events%40columbia.edu-2026-12-05T19:30:00",
+   "title": "Anthony Hervey Septet",
+   "start": "2026-12-05T19:30:00",
+   "venue": "Miller Theatre, 2960 Broadway, New York, NY 10027",
+   "type": "Concert",
+   "desc": "&lt;p&gt;Trumpeter and composer Anthony Hervey, a leading voice in jazz and prot&amp;eacute;g&amp;eacute; of Wynton Marsalis, returns to the Miller stage with his Septet. Blending the complexities of ",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-9eab6da0-019e-ad5e2bc2-00003fd5events%40columbia.edu&recurrenceId="
+  }
+ ]
+}
