@@ -41,7 +41,26 @@ function toIso(start) {
   return null;
 }
 
-const clean = (s) => String(s || '').replace(/<[^>]*>/g, ' ').replace(/\s+/g, ' ').trim();
+const NAMED = { amp: '&', lt: '<', gt: '>', quot: '"', apos: "'", nbsp: ' ', ndash: '\u2013', mdash: '\u2014', rsquo: '\u2019', lsquo: '\u2018', rdquo: '\u201d', ldquo: '\u201c', hellip: '\u2026' };
+const decode = (s) => s
+  .replace(/&#x([0-9a-f]+);/gi, (_, h) => String.fromCodePoint(parseInt(h, 16)))
+  .replace(/&#(\d+);/g, (_, d) => String.fromCodePoint(+d))
+  .replace(/&([a-z]+);/gi, (m, n) => NAMED[n.toLowerCase()] ?? m);
+// Bedework escapes its HTML (sometimes twice), so decode and strip tags until stable.
+function clean(s) {
+  let t = String(s || '');
+  for (let i = 0; i < 4; i++) {
+    const next = decode(t).replace(/<[^>]*>/g, ' ');
+    if (next === t) break;
+    t = next;
+  }
+  return t.replace(/\s+/g, ' ').trim();
+}
+function shorten(s, n = 200) {
+  if (s.length <= n) return s;
+  const cut = s.slice(0, n).replace(/\s+\S*$/, '');
+  return cut + '\u2026';
+}
 
 async function fetchSource({ type, url }) {
   const res = await fetch(url, {
@@ -66,9 +85,9 @@ async function fetchSource({ type, url }) {
       id: `${e.guid || e.eventlink || e.summary}-${start}`,
       title: clean(e.summary),
       start,
-      venue: clean(e.location?.address || ''),
+      venue: clean(e.location?.address || '').replace(/,?\s*New York,\s*NY\s*\d{5}/i, ''),
       type: typeOf(e, type),
-      desc: clean(e.description).slice(0, 200),
+      desc: shorten(clean(e.description)),
       url: e.eventlink || e.link || '',
     });
   }
