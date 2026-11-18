@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en"><head><meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>What’s Playing Tonight — Free shows at Columbia</title>
+<title>What’s Playing Tonight — Shows at Columbia</title>
 <style>
 :root{--bg:#f6f3ee;--card:#fff;--ink:#1b1b22;--mut:#6b6b76;--line:#e4dfd6;--acc:#1d4f91;--acc2:#c98a0a;--tag:#eef2f8}
 @media(prefers-color-scheme:dark){:root{--bg:#14151a;--card:#1d1f27;--ink:#f1efe9;--mut:#9a9aa6;--line:#2c2f3a;--acc:#7fb2ff;--acc2:#f0b33a;--tag:#262a36}}
@@ -22,28 +22,29 @@ footer{margin-top:40px;color:var(--mut);font-size:.8rem;text-align:center}
 @media(max-width:520px){.ev{flex-direction:column;gap:4px}}
 </style></head><body><div class="wrap">
 <h1>What’s Playing <span>Tonight</span></h1>
-<p class="sub">Free concerts and shows on Columbia’s campus, updated every night.</p>
+<p class="sub">Concerts and shows on Columbia’s campus, free and low-cost, updated every night.</p>
 <div class="bar" id="when"><button class="chip" data-w="today">Tonight</button><button class="chip" data-w="week" aria-pressed="true">This week</button><button class="chip" data-w="all">Everything</button></div>
 <div class="bar" id="types"></div>
 <div id="list"><div class="empty">Loading…</div></div>
 <footer id="foot">Not officially affiliated with Columbia University. Check each event page for details.</footer>
 </div>
 <script>
-var EV=[],when='week',type='All',list=document.getElementById('list'),tEl=document.getElementById('types');
+var EV=[],when='week',type='All',freeOnly=false,list=document.getElementById('list'),tEl=document.getElementById('types');
 function nyDate(off){var d=new Date(Date.now()+off*864e5);return d.toLocaleDateString('en-CA',{timeZone:'America/New_York'})}
 function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
 function fmtT(s){var p=s.slice(11,16).split(':'),h=+p[0];if(isNaN(h)||s.length<16)return'';var a=h>=12?'PM':'AM';return(h%12||12)+':'+p[1]+' '+a}
 function fmtD(d){var l=d===nyDate(0)?'Tonight · ':d===nyDate(1)?'Tomorrow · ':'';return l+new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}
-function types(){var s=['All'];EV.forEach(function(e){if(s.indexOf(e.type)<0)s.push(e.type)});tEl.innerHTML=s.map(function(x){return'<button class="chip" data-t="'+esc(x)+'" aria-pressed="'+(x===type)+'">'+esc(x)+'</button>'}).join('')}
+function priceHtml(e){if(e.price==='free')return'Free';if(e.price==='paid')return esc(e.cost||'Ticketed');return e.url?'<a href="'+esc(e.url)+'" target="_blank" rel="noopener" style="color:var(--acc)">Price: see listing →</a>':'Price not listed'}
+function types(){var s=['All'];EV.forEach(function(e){if(s.indexOf(e.type)<0)s.push(e.type)});tEl.innerHTML=s.map(function(x){return'<button class="chip" data-t="'+esc(x)+'" aria-pressed="'+(x===type)+'">'+esc(x)+'</button>'}).join('')+'<button class="chip" data-f="1" aria-pressed="'+freeOnly+'">Free only</button>'}
 function render(){var t=nyDate(0),end=nyDate(7);
-var r=EV.filter(function(e){var d=e.start.slice(0,10);if(d<t)return false;if(when==='today'&&d!==t)return false;if(when==='week'&&d>end)return false;return type==='All'||e.type===type});
+var r=EV.filter(function(e){var d=e.start.slice(0,10);if(d<t)return false;if(when==='today'&&d!==t)return false;if(when==='week'&&d>end)return false;if(freeOnly&&e.price!=='free')return false;return type==='All'||e.type===type});
 if(!r.length){list.innerHTML='<div class="empty">No free shows listed for that filter yet.</div>';return}
 var h='',last='';r.forEach(function(e){var d=e.start.slice(0,10);if(d!==last){h+='<div class="day">'+esc(fmtD(d))+'</div>';last=d}
 var title=e.url?'<a href="'+esc(e.url)+'" target="_blank" rel="noopener">'+esc(e.title)+'</a>':esc(e.title);
-h+='<div class="ev"><div class="time">'+esc(fmtT(e.start))+'</div><div><h3>'+title+'</h3><div class="meta"><span class="tag">'+esc(e.type)+'</span>'+esc(e.venue)+' · Free</div>'+(e.desc?'<div class="meta" style="margin-top:4px">'+esc(e.desc)+'</div>':'')+'</div></div>'});
+h+='<div class="ev"><div class="time">'+esc(fmtT(e.start))+'</div><div><h3>'+title+'</h3><div class="meta"><span class="tag">'+esc(e.type)+'</span>'+esc(e.venue)+' · '+priceHtml(e)+'</div>'+(e.desc?'<div class="meta" style="margin-top:4px">'+esc(e.desc)+'</div>':'')+'</div></div>'});
 list.innerHTML=h}
 document.getElementById('when').onclick=function(e){var w=e.target.getAttribute('data-w');if(!w)return;when=w;[].forEach.call(this.children,function(c){c.setAttribute('aria-pressed',c.getAttribute('data-w')===w)});render()};
-tEl.onclick=function(e){var t=e.target.getAttribute('data-t');if(!t)return;type=t;types();render()};
+tEl.onclick=function(e){if(e.target.getAttribute('data-f')){freeOnly=!freeOnly;types();render();return}var t=e.target.getAttribute('data-t');if(!t)return;type=t;types();render()};
 fetch('events.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){EV=j.events||[];types();render();
 if(j.generatedAt)document.getElementById('foot').insertAdjacentText('afterbegin','Last updated '+new Date(j.generatedAt).toLocaleString('en-US',{timeZone:'America/New_York',dateStyle:'medium',timeStyle:'short'})+'. ')}).catch(function(){list.innerHTML='<div class="empty">Couldn’t load events right now.</div>'});
 </script></body></html>
