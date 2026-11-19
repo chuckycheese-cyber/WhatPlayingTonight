@@ -1,0 +1,163 @@
+[
+  {
+    "title": "Columbia Pops: Popsicles Showcase",
+    "start": "2026-11-22T17:00:00",
+    "venue": "Wang Pavilion",
+    "type": "Performance",
+    "desc": "Student showcase by Columbia Pops. Runs 5:00–7:00 PM."
+  },
+  {
+    "title": "Columbia Pops: First Orchestra Concert",
+    "start": "2026-12-12T11:30:00",
+    "venue": "Roone Auditorium",
+    "type": "Concert",
+    "desc": "Columbia Pops orchestra concert. Runs 11:30 AM–1:30 PM."
+  },
+  {
+    "title": "Columbia Pops: Second Orchestra Concert",
+    "start": "2026-12-14T21:15:00",
+    "venue": "Roone Auditorium",
+    "type": "Concert",
+    "desc": "Columbia Pops orchestra concert. Runs 9:15–11:30 PM."
+  },
+  {
+    "title": "MPP: Guest Artist Concert",
+    "start": "2026-12-04T19:30:00",
+    "venue": "The Forum",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Classical Chamber Ensembles",
+    "start": "2026-12-05T14:00:00",
+    "venue": "Italian Academy",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Sessions at 2:00, 3:30 and 5:00 PM. Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Classical Chamber Ensembles",
+    "start": "2026-12-06T14:00:00",
+    "venue": "Italian Academy",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Sessions at 2:00 and 3:30 PM. Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Klezmer Ensemble",
+    "start": "2026-12-06T12:00:00",
+    "venue": "Wang Pavilion",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Vocal Jazz Ensemble",
+    "start": "2026-12-06T15:00:00",
+    "venue": "Wang Pavilion",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Jazz Ensembles",
+    "start": "2026-12-06T16:15:00",
+    "venue": "Wang Pavilion",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Sets at 4:15, 5:00 and 6:00 PM. Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Afro-Cuban Ensemble",
+    "start": "2026-12-06T19:00:00",
+    "venue": "Wang Pavilion",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Hogaku and Gagaku",
+    "start": "2026-12-10T19:00:00",
+    "venue": "St. Paul's Chapel",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Jazz Ensembles",
+    "start": "2026-12-11T15:30:00",
+    "venue": "Wang Pavilion",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Runs 3:30–6:15 PM. Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Columbia University Orchestra",
+    "start": "2026-12-11T19:30:00",
+    "venue": "Symphony Space",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Pop/Contemporary Ensemble",
+    "start": "2026-12-12T15:00:00",
+    "venue": "Wang Pavilion",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Jazz Ensembles",
+    "start": "2026-12-12T16:00:00",
+    "venue": "Wang Pavilion",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Runs 4:00–6:45 PM. Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Collegium Musicum",
+    "start": "2026-12-14T19:00:00",
+    "venue": "St. Hilda's & St. Hugh's School",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  },
+  {
+    "title": "MPP: Undergraduate Composition",
+    "start": "2026-12-16T19:00:00",
+    "venue": "St. Paul's Chapel",
+    "type": "Concert",
+    "price": "free",
+    "cost": "Free (register in advance)",
+    "desc": "Free and open to all; register in advance at mpp.music.columbia.edu/events.",
+    "url": "https://mpp.music.columbia.edu/events"
+  }
+]
