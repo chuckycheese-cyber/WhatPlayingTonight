@@ -1,28 +1,6 @@
 {
- "generatedAt": "2026-11-19T00:58:03.671Z",
+ "generatedAt": "2026-11-19T12:19:41.799Z",
  "events": [
-  {
-   "id": "CAL-00bbdb71-a11a8f2f-01a1-1c71a71e-00006e46events%40columbia.edu-2026-11-18T18:00:00",
-   "title": "Elisabeth Jacquet de la Guerre: Works Lost and Found",
-   "start": "2026-11-18T18:00:00",
-   "venue": "Buell Hall, 515 W. 116 St. East Gallery",
-   "type": "Concert",
-   "price": "unknown",
-   "cost": "",
-   "desc": "Panel discussion with Elizabeth Weinfield, Robinson McClellan, Susan Boynton, Anne Higonnet, and Rebecca Cypess Sonnambula opens their 2026–2027 season with the premiere of previously lost work by…",
-   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a11a8f2f-01a1-1c71a71e-00006e46events%40columbia.edu&recurrenceId="
-  },
-  {
-   "id": "CAL-00bbdb7c-a0c82d20-01a0-cb50f2fc-00000caeevents%40columbia.edu-2026-11-18T19:10:00",
-   "title": "ISHR Fall Film Series",
-   "start": "2026-11-18T19:10:00",
-   "venue": "Schermerhorn Hall, 1198 Amsterdam Ave. 501",
-   "type": "Film",
-   "price": "unknown",
-   "cost": "",
-   "desc": "Join us for ISHR's human rights film series featuring thought-provoking films and documentaries. Open to all Columbia affiliates. Film line up: September 23: Hotel Rwanda September 30: Dear Mandela…",
-   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a0c82d20-01a0-cb50f2fc-00000caeevents%40columbia.edu&recurrenceId=20261119T001000Z"
-  },
   {
    "id": "CAL-00bbdb70-a162a385-01a1-64ddbc41-000062ecevents%40columbia.edu-2026-11-19T16:00:00",
    "title": "An Afternoon with Emmet Cohen: Live Jazz Performance & Discussion",
