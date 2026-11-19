@@ -1,1 +1,58 @@
-
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>What’s Playing Tonight — Shows at Columbia</title>
+<meta name="description" content="Concerts, theater, and shows happening on Columbia’s campus, updated every night.">
+<style>
+:root{--bg:#5b21b6;--green:#39ff14;--sky:#fff;--blue:#fff;--ink:#fff;--mut:rgba(255,255,255,.8);--card:rgba(25,5,75,.38);--tag:rgba(255,255,255,.16);color-scheme:light}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Georgia,'Times New Roman',serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
+.wrap{max-width:780px;margin:0 auto;padding:20px 16px 60px}
+h1{font-size:clamp(2.1rem,7vw,3.4rem);line-height:1.05;margin:26px 0 8px;letter-spacing:-.02em;color:transparent;-webkit-text-fill-color:transparent;
+background:linear-gradient(105deg,#39ff14 0%,#39ff14 42%,#f4ffe8 50%,#39ff14 58%,#39ff14 100%);background-size:260% 100%;background-position:100% 0;
+-webkit-background-clip:text;background-clip:text;
+filter:drop-shadow(0 0 14px rgba(57,255,20,.4));animation:glisten 4.8s ease-in-out infinite}
+@keyframes glisten{0%{background-position:100% 0}55%,100%{background-position:0% 0}}
+@media(prefers-reduced-motion:reduce){h1{animation:none}}
+.sub,.meta,footer,.bar,.day,.time{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
+.sub{margin:0;color:var(--sky);font-weight:500;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem}
+.bar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
+#types{margin-top:8px}
+.chip{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:var(--ink);padding:7px 15px;border-radius:999px;font:600 .88rem system-ui,sans-serif;cursor:pointer}
+.chip[aria-pressed=true]{background:var(--green);color:#06210a;border-color:var(--green)}
+.day{font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);margin:28px 0 8px}
+.ev{background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px;border:1px solid rgba(255,255,255,.14)}
+.time{align-self:flex-start;min-width:76px;text-align:center;background:var(--green);color:#06210a;font-weight:700;font-size:.9rem;border-radius:8px;padding:3px 8px;white-space:nowrap}
+.ev h3{margin:0 0 2px;font-size:1.1rem;color:var(--blue)}
+.ev a{color:inherit;text-decoration:none}.ev a:hover{text-decoration:underline}
+.meta{color:var(--mut);font-size:.88rem}
+.tag{background:var(--tag);color:var(--ink);border-radius:6px;padding:1px 8px;font-size:.75rem;margin-right:6px}
+.empty{text-align:center;color:var(--sky);padding:40px 0;font-family:system-ui,sans-serif}
+footer{margin-top:40px;font-size:.8rem;text-align:center;color:var(--sky);font-weight:500}
+@media(max-width:520px){.ev{flex-direction:column;gap:4px}}
+</style></head><body><div class="wrap">
+<h1>What’s Playing Tonight</h1>
+<p class="sub">Concerts and shows on Columbia’s campus, updated every night.</p>
+<div class="bar" id="when"><button class="chip" data-w="today">Tonight</button><button class="chip" data-w="week" aria-pressed="true">This week</button><button class="chip" data-w="all">Everything</button></div>
+<div class="bar" id="types"></div>
+<div id="list"><div class="empty">Loading…</div></div>
+<footer id="foot">Not officially affiliated with Columbia University. Check each event page for tickets, registration, and details.</footer>
+</div>
+<script>
+var EV=[],when='week',type='All',list=document.getElementById('list'),tEl=document.getElementById('types');
+function nyDate(off){var d=new Date(Date.now()+off*864e5);return d.toLocaleDateString('en-CA',{timeZone:'America/New_York'})}
+function esc(s){return String(s).replace(/[&<>"]/g,function(c){return{'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]})}
+function fmtT(s){var p=s.slice(11,16).split(':'),h=+p[0];if(isNaN(h)||s.length<16)return'';var a=h>=12?'PM':'AM';return(h%12||12)+':'+p[1]+' '+a}
+function fmtD(d){var l=d===nyDate(0)?'Tonight · ':d===nyDate(1)?'Tomorrow · ':'';return l+new Date(d+'T12:00:00').toLocaleDateString('en-US',{weekday:'long',month:'long',day:'numeric'})}
+function types(){var s=['All'];EV.forEach(function(e){if(s.indexOf(e.type)<0)s.push(e.type)});tEl.innerHTML=s.map(function(x){return'<button class="chip" data-t="'+esc(x)+'" aria-pressed="'+(x===type)+'">'+esc(x)+'</button>'}).join('')}
+function render(){var t=nyDate(0),end=nyDate(7);
+var r=EV.filter(function(e){var d=e.start.slice(0,10);if(d<t)return false;if(when==='today'&&d!==t)return false;if(when==='week'&&d>end)return false;return type==='All'||e.type===type});
+if(!r.length){list.innerHTML='<div class="empty">Nothing listed for that filter yet.</div>';return}
+var h='',last='';r.forEach(function(e){var d=e.start.slice(0,10);if(d!==last){h+='<div class="day">'+esc(fmtD(d))+'</div>';last=d}
+var title=e.url?'<a href="'+esc(e.url)+'" target="_blank" rel="noopener">'+esc(e.title)+'</a>':esc(e.title);
+h+='<div class="ev"><div class="time">'+esc(fmtT(e.start))+'</div><div><h3>'+title+'</h3><div class="meta"><span class="tag">'+esc(e.type)+'</span>'+esc(e.venue)+'</div>'+(e.desc?'<div class="meta" style="margin-top:4px">'+esc(e.desc)+'</div>':'')+'</div></div>'});
+list.innerHTML=h}
+document.getElementById('when').onclick=function(e){var w=e.target.getAttribute('data-w');if(!w)return;when=w;[].forEach.call(this.children,function(c){c.setAttribute('aria-pressed',c.getAttribute('data-w')===w)});render()};
+tEl.onclick=function(e){var t=e.target.getAttribute('data-t');if(!t)return;type=t;types();render()};
+fetch('events.json',{cache:'no-cache'}).then(function(r){return r.json()}).then(function(j){EV=j.events||[];types();render()}).catch(function(){list.innerHTML='<div class="empty">Couldn’t load events right now.</div>'});
+</script></body></html>
