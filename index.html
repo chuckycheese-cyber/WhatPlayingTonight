@@ -4,16 +4,11 @@
 <title>What’s Playing Tonight — Shows at Columbia</title>
 <meta name="description" content="Concerts, theater, and shows happening on Columbia’s campus, updated every night.">
 <style>
-:root{--bg:#5b21b6;--green:#39ff14;--sky:#fff;--blue:#fff;--ink:#fff;--mut:rgba(255,255,255,.8);--card:rgba(25,5,75,.38);--tag:rgba(255,255,255,.16);color-scheme:light}
+:root{--bg:#5b21b6;--green:#39ff14;--sky:#fff;--blue:#fff;--ink:#fff;--mut:rgba(255,255,255,.8);--card:#000;--tag:rgba(255,255,255,.16);color-scheme:light}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.5 Georgia,'Times New Roman',serif;padding:env(safe-area-inset-top) 0 env(safe-area-inset-bottom)}
 .wrap{max-width:780px;margin:0 auto;padding:20px 16px 60px}
-h1{font-size:clamp(2.1rem,7vw,3.4rem);line-height:1.05;margin:26px 0 8px;letter-spacing:-.02em;color:transparent;-webkit-text-fill-color:transparent;
-background:linear-gradient(105deg,#39ff14 0%,#39ff14 42%,#f4ffe8 50%,#39ff14 58%,#39ff14 100%);background-size:260% 100%;background-position:100% 0;
--webkit-background-clip:text;background-clip:text;
-filter:drop-shadow(0 0 14px rgba(57,255,20,.4));animation:glisten 4.8s ease-in-out infinite}
-@keyframes glisten{0%{background-position:100% 0}55%,100%{background-position:0% 0}}
-@media(prefers-reduced-motion:reduce){h1{animation:none}}
+h1{font-size:clamp(2.1rem,7vw,3.4rem);line-height:1.05;margin:26px 0 8px;letter-spacing:-.02em;color:var(--green);text-shadow:0 0 22px rgba(57,255,20,.45)}
 .sub,.meta,footer,.bar,.day,.time{font-family:system-ui,-apple-system,"Segoe UI",sans-serif}
 .sub{margin:0;color:var(--sky);font-weight:500;font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-size:.95rem}
 .bar{display:flex;flex-wrap:wrap;gap:8px;margin:16px 0 0}
@@ -21,7 +16,7 @@ filter:drop-shadow(0 0 14px rgba(57,255,20,.4));animation:glisten 4.8s ease-in-o
 .chip{border:1px solid rgba(255,255,255,.4);background:rgba(255,255,255,.12);color:var(--ink);padding:7px 15px;border-radius:999px;font:600 .88rem system-ui,sans-serif;cursor:pointer}
 .chip[aria-pressed=true]{background:var(--green);color:#06210a;border-color:var(--green)}
 .day{font-weight:700;font-size:.8rem;letter-spacing:.1em;text-transform:uppercase;color:var(--sky);margin:28px 0 8px}
-.ev{background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px;border:1px solid rgba(255,255,255,.14)}
+.ev{background:var(--card);border-radius:14px;padding:14px 16px;margin-bottom:10px;display:flex;gap:14px;box-shadow:0 8px 22px rgba(0,0,0,.35)}
 .time{align-self:flex-start;min-width:76px;text-align:center;background:var(--green);color:#06210a;font-weight:700;font-size:.9rem;border-radius:8px;padding:3px 8px;white-space:nowrap}
 .ev h3{margin:0 0 2px;font-size:1.1rem;color:var(--blue)}
 .ev a{color:inherit;text-decoration:none}.ev a:hover{text-decoration:underline}
