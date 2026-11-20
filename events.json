@@ -1,28 +1,6 @@
 {
- "generatedAt": "2026-11-19T14:05:50.311Z",
+ "generatedAt": "2026-11-20T12:20:02.966Z",
  "events": [
-  {
-   "id": "CAL-00bbdb70-a162a385-01a1-64ddbc41-000062ecevents%40columbia.edu-2026-11-19T16:00:00",
-   "title": "An Afternoon with Emmet Cohen: Live Jazz Performance & Discussion",
-   "start": "2026-11-19T16:00:00",
-   "venue": "Jerome L. Greene Science Center, 3227 Broadway 9th Floor, Kavli Auditorium",
-   "type": "Concert",
-   "price": "unknown",
-   "cost": "",
-   "desc": "The Zuckerman Institute is thrilled to welcome celebrated jazz pianist Emmet Cohen as our new Jazz Artist-in-Residence. Join us for a performance with Emmet, moderated by Michael Shadlen , Professor…",
-   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb70-a162a385-01a1-64ddbc41-000062ecevents%40columbia.edu&recurrenceId="
-  },
-  {
-   "id": "CAL-00bbdb7c-a0c82d20-01a0-ca77948b-00005e74events%40columbia.edu-2026-11-19T18:30:00",
-   "title": "Lenfest Film: Andy Bienen Presents 'The Best Years of Our Lives'",
-   "start": "2026-11-19T18:30:00",
-   "venue": "Lenfest Center for the Arts, 615 W. 129 St. Katharina Otto-Bernstein Screening Room (Second Floor)",
-   "type": "Film",
-   "price": "unknown",
-   "cost": "",
-   "desc": "Lenfest Film Faculty Spotlight: Andy Bienen Presents The Best Years of Our Lives The Best Years of Our Lives follows three World War II veterans who return to their hometown and try to adjust to…",
-   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a0c82d20-01a0-ca77948b-00005e74events%40columbia.edu&recurrenceId="
-  },
   {
    "id": "CAL-00bbdb70-a1b019f4-01a1-b1e18d6e-000052a2events%40columbia.edu-2026-11-20T18:00:00",
    "title": "Plus 86 Fall Showcase 2026",
@@ -154,6 +132,17 @@
    "cost": "",
    "desc": "️Get ready to step into a winter wonderland at the 9th Annual Low Lounge: Snow Place Like Low ! ️ Join University Life at the Low Rotunda and Plaza for an evening filled with winter magic at this…",
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a18bdb36-01a1-905f81ed-00004d8cevents%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb7c-a1f31537-01a1-f46da298-00005570events%40columbia.edu-2026-12-09T18:00:00",
+   "title": "Music, and the Mutation of Emotions",
+   "start": "2026-12-09T18:00:00",
+   "venue": "Buell Hall, 515 W. 116 St. East Gallery",
+   "type": "Concert",
+   "price": "unknown",
+   "cost": "",
+   "desc": "In this recital, talk and conversation, composer Pauchi Sasaki will present her current work, performed by violinist Jennifer Curtis, to be followed by a conversation with composer and Francis Goelet…",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a1f31537-01a1-f46da298-00005570events%40columbia.edu&recurrenceId="
   },
   {
    "id": "CAL-00bbdb7c-a19b89c9-01a1-9d48fb7f-0000441eevents%40columbia.edu-2026-12-10T14:00:00",
