@@ -1,17 +1,6 @@
 {
- "generatedAt": "2026-11-20T13:47:23.944Z",
+ "generatedAt": "2026-11-21T11:54:17.472Z",
  "events": [
-  {
-   "id": "CAL-00bbdb70-a1b019f4-01a1-b1e18d6e-000052a2events%40columbia.edu-2026-11-20T18:00:00",
-   "title": "Plus 86 Fall Showcase 2026",
-   "start": "2026-11-20T18:00:00",
-   "venue": "Lerner Hall, 2920 Broadway Roone Arledge Auditorium",
-   "type": "Performance",
-   "price": "unknown",
-   "cost": "",
-   "desc": "Plus86 Dance Crew | Columbia University As the only Chinese street dance crew at Columbia University, Plus86 actively participates in a wide range of performances and events both on and off campus,…",
-   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb70-a1b019f4-01a1-b1e18d6e-000052a2events%40columbia.edu&recurrenceId="
-  },
   {
    "id": "CAL-00bbdb7c-a0c82d20-01a0-cb2d6b5c-000005f1events%40columbia.edu-2026-11-21T12:00:00",
    "title": "Lenfest Kids: 'Meet the Robinsons'",
@@ -176,6 +165,17 @@
    "cost": "",
    "desc": "Comedian Buster Keaton stars in his own directorial debut as a determined suitor pursuing the love of his life across three different eras: the Stone Age, Ancient Rome, and the Roaring Twenties. Our…",
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb7c-a0c82d20-01a0-cb2ec2c8-0000061devents%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb71-a11a8f2f-01a1-1c87fe4a-000073cbevents%40columbia.edu-2027-01-20T18:30:00",
+   "title": "Screening Four Nights of a Dreamer",
+   "start": "2027-01-20T18:30:00",
+   "venue": "Buell Hall, 515 W. 116 St. East Gallery",
+   "type": "Film",
+   "price": "unknown",
+   "cost": "",
+   "desc": "Robert Bresson, 1971, 82 min. The rarely screened Four Nights of a Dreamer is Robert Bresson’s great forgotten masterpiece, a stark yet haunting ode to romantic idealism and the capriciousness of…",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a11a8f2f-01a1-1c87fe4a-000073cbevents%40columbia.edu&recurrenceId="
   }
  ]
 }
