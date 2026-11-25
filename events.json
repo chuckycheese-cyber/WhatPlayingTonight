@@ -1,5 +1,5 @@
 {
- "generatedAt": "2026-11-24T15:29:31.861Z",
+ "generatedAt": "2026-11-25T13:42:45.320Z",
  "events": [
   {
    "id": "CAL-00bbdb7c-a0c82d20-01a0-cb50f2fc-00000caeevents%40columbia.edu-2026-11-25T19:10:00",
@@ -66,6 +66,28 @@
    "cost": "",
    "desc": "The esteemed Tallis Scholars return for their annual holiday appearance with a concert celebrating music in praise of the Virgin Mary. From beloved settings of Ave Maria and Salve regina to a world…",
    "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-9eab6da0-019e-ad74d549-000042d1events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb71-a20cd0aa-01a2-0ec16fb4-00004423events%40columbia.edu-2026-12-04T19:00:00",
+   "title": "Special Guest Artist Linda May Han Oh In Concert (Free)",
+   "start": "2026-12-04T19:00:00",
+   "venue": "The Forum at Columbia University, 601 W. 125th St.",
+   "type": "Concert",
+   "price": "unknown",
+   "cost": "",
+   "desc": "Join us for a free and open-to-the-public concert featuring Linda May Han Oh, presented by the Louis Armstrong Jazz Performance Program, alongside Columbia University Jazz Ensembles. The performance…",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a20cd0aa-01a2-0ec16fb4-00004423events%40columbia.edu&recurrenceId="
+  },
+  {
+   "id": "CAL-00bbdb71-a1fd5d6c-01a1-ffe97e01-000046bdevents%40columbia.edu-2026-12-04T19:00:00",
+   "title": "Louis Armstrong Jazz Performance Program Presents: Linda Oh",
+   "start": "2026-12-04T19:00:00",
+   "venue": "The Forum at Columbia University, 601 W. 125th St. 2nd floor",
+   "type": "Concert",
+   "price": "unknown",
+   "cost": "",
+   "desc": "Register by clicking here!",
+   "url": "https://events.columbia.edu/cal/event/eventView.do?b=de&calPath=%2Fpublic%2Fcals%2FMainCal&guid=CAL-00bbdb71-a1fd5d6c-01a1-ffe97e01-000046bdevents%40columbia.edu&recurrenceId="
   },
   {
    "id": "CAL-00bbdb7c-a099d4ae-01a0-9dcae900-00000096events%40columbia.edu-2026-12-05T19:00:00",
